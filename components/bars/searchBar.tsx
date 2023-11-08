@@ -16,7 +16,7 @@ export default function SearchBar() {
   };
 
   return (
-    <form onSubmit={submitSearch}>
+    <form onSubmit={submitSearch} className="w-full">
       <FormControl>
         <input
           type="search"
