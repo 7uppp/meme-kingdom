@@ -16,14 +16,14 @@ export default function SearchBar() {
   };
 
   return (
-    <form onSubmit={submitSearch} className="w-full">
+    <form onSubmit={submitSearch} className="w-full ">
       <FormControl>
         <input
           type="search"
           value={input}
           onChange={handleInputChange}
           placeholder="Search memes..."
-          className="search-input input flex-1 w-full border rounded-lg bg-gray-100 h-12 px-4 outline-none"
+          className="search-input input flex-1 w-full border rounded-xl bg-gray-100 h-12 px-4 outline-none"
         />
         <Button
           type="submit"
