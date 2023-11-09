@@ -11,8 +11,13 @@ import searchIcon from "@/public/icon/search.png";
 export default function NavBar() {
   const [searchIconClicked, setSearchIconClicked] = useState(false);
 
+  const searchIconClick = () => {
+    setSearchIconClicked(true);
+    console.log("searchIconClicked");
+  };
+
   return (
-    <nav className="navbar flex justify-between items-center container h-[4.5rem] fixed left-0 right-0">
+    <nav className="navbar flex justify-between items-center container h-[4.5rem] sticky top-1 left-0 right-0">
       <div className="pc-nav hidden md:flex justify-between items-center w-full ">
         <div className="logo">
           <Image src="/logo.svg" width={100} height={100} alt="logo" />
@@ -50,10 +55,7 @@ export default function NavBar() {
             </div>
 
             <div className="toolbar flex justify-between items-center">
-              <div
-                className="searchIcon"
-                onClick={() => setSearchIconClicked(true)}
-              >
+              <div className="searchIcon" onClick={searchIconClick}>
                 <Image
                   src={searchIcon}
                   alt="search-icon"
@@ -62,7 +64,13 @@ export default function NavBar() {
               </div>
               <Menu direction="ltr" isLazy={true}>
                 <MenuButton>
-                  <Image src={menu} alt="drop-menu" />
+                  <Image
+                    src={menu}
+                    alt="drop-menu"
+                    width={30}
+                    height={30}
+                    className="mb-10"
+                  />
                 </MenuButton>
                 <MenuList>
                   <MenuItem>Explore</MenuItem>

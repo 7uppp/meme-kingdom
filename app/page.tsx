@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <main className="flex flex-col justify-center items-center w-full fixed">
-        <div className="main-wrapper w-full flex justify-evenly container main-custom-height ">
+      <main className="flex justify-center items-center w-full fixed">
+        <div className="main-wrapper w-full flex justify-evenly container border-box pt-8 pb-8">
           <div className="side-bar md:flex-2">
             <SideBar />
           </div>
