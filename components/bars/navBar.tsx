@@ -62,15 +62,10 @@ export default function NavBar() {
                   className="cursor-pointer"
                 />
               </div>
+
               <Menu direction="ltr" isLazy={true}>
                 <MenuButton>
-                  <Image
-                    src={menu}
-                    alt="drop-menu"
-                    width={30}
-                    height={30}
-                    className="mb-10"
-                  />
+                  <Image src={menu} alt="drop-menu" />
                 </MenuButton>
                 <MenuList>
                   <MenuItem>Explore</MenuItem>
